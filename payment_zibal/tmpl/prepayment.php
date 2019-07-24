@@ -12,7 +12,10 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <form action="<?php echo @$vars->zibal; ?>" method="post" name="adminForm" enctype="multipart/form-data">
-	<p><?php echo 'درگاه زیبال' ?></p>
+
+    <p>
+        <img src="<?php echo JRoute::_(JURI::root(). "plugins/j2store/payment_zibal/logo.png" ) ?>"/>
+        <?php echo 'پرداخت آنلاین' ?></p>
 	<br />
     <input type="submit" class="j2store_cart_button button btn btn-primary" value="<?php echo JText::_($vars->button_text); ?>" />
 </form>

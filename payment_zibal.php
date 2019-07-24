@@ -66,7 +66,7 @@ class plgJ2StorePayment_zibal extends J2StorePaymentPlugin
         $vars->orderpayment_type = $this->_element;
         $vars->button_text = $this->params->get('button_text', 'J2STORE_PLACE_ORDER');
         //============================================================================
-        $vars->display_name = 'Zibal';
+        $vars->display_name = 'درگاه پرداخت آنلاین زیبال';
         $vars->merchant_id = $this->params->get('merchant_id', '');
         if ($vars->merchant_id == null || $vars->merchant_id == ''){
             $link = JRoute::_(JURI::root(). "index.php?option=com_j2store" );
@@ -156,11 +156,10 @@ class plgJ2StorePayment_zibal extends J2StorePaymentPlugin
                                     'trackId' => $Authority,
                                 ]
                             );
-                            $resultStatus = abs($result->result);
                             if ($result->result == 100 && round($orderpayment->order_total,0)==$result->amount) {
                                 $msg= $this->getGateMsg("موفق");
-                                $this->saveStatus($msg,1,$customer_note,'ok',$result->RefID,$orderpayment);
-                                $app->enqueueMessage($result->refNumber . ' کد پیگیری شما', 'message');
+                                $this->saveStatus($msg,1,$customer_note,'ok',$result->refNumber,$orderpayment);
+                                $app->enqueueMessage($result->refNumber . ' شماره مرجع تراکنش شما', 'message');
                             }
                             else {
                                 $msg= $this->getGateMsg($result->message);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="plugin" method="upgrade" group="j2store">
-	<name>Zibal</name>
+	<name>درگاه پرداخت زیبال</name>
 	<title>zibal</title>
 	<author>تیم فنی زیبال</author>
 	<creationDate>July 2019</creationDate>
@@ -8,12 +8,12 @@
 	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
 	<authorEmail>mzn.sites@gmail.com</authorEmail>
 	<authorUrl>https://zibal.ir</authorUrl>
-	<version>0.0.1</version>
-	<description>افزونه درگاه پرداخت جی۲ برای زیبال</description>
+	<version>1.1</version>
+	<description>افزونه درگاه پرداخت زیبال برای j2</description>
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="merchant_id" type="text" size="40" label="شناسه merchant" description=" merchant خود را وارد کنید" default=""></field>
+				<field name="merchant_id" type="text" size="40" label="شناسه merchant" description=" merchant خود را وارد کنید" default="zibal"></field>
 				<field name="zibaldirect" type="list" default="0" label="زیبال دایرکت (درگاه مستقیم)" description="">
 					<option value="0">غیر فعال</option>
 					<option value="1">فعال</option>
@@ -25,6 +25,7 @@
 		<filename plugin="payment_zibal">payment_zibal.php</filename>
 		<filename plugin="payment_zibal">zibal_inputcheck.php</filename>
 		<filename>index.html</filename>
+		<filename>logo.png</filename>
 		<folder>payment_zibal</folder>
 	</files>	
 </extension>

@@ -98,7 +98,7 @@ class plgJ2StorePayment_zibal extends J2StorePaymentPlugin
                     $vars->zibal= 'https://gateway.zibal.ir/start/'.$result->trackId;
                 }
                 else {
-                    $vars->zibal= 'https://gateway.zibal.ir/start/'.$result->trackId.'‫‪/direct';
+                    $vars->zibal= 'https://gateway.zibal.ir/start/'.$result->trackId.'/direct';
                 }
                 $html = $this->_getLayout('prepayment', $vars);
                 return $html;
